@@ -2,6 +2,8 @@
 
 > In this sprint, I have managed to grasp basic knowledge about public/secret keys and the combination of three types of algorithm in the encrypting process.
 
+**Mechanism:**
+
 > When a message is on the way to its destination, it can be intercepted and its content might be exposed and tamperable. We can solve the problem by sending the message via a fully private channel, or implement security methods so that even when attackers intercept our messages, they cannot exploit. 
 
 > A fully private channel is expensive and we cannot afford it to everyone. So people came up with an idea of using a pair of keys. This pair of keys include a secret key (used by senders, to sign a message) and a public key (used be receivers, to verify the message).
@@ -14,7 +16,7 @@
 | Sign | sk, message m | signature $\sigma$ | Sender (when sending a message) |
 | Verify | pk, m, $\sigma\$ | true/false | Receivers | 
 
-> An example (RSA with very small n):
+**An example (RSA with very small n):**
 
 > Keygen:   
 p = 61, q = 53, n = pq = 3233, e = 17  
@@ -46,9 +48,9 @@ In reality, RSA use n >= 2048, so it **seems** to take forever to get p, q from 
 | SDitH | Syndrome decoding | 
 
 > To compare these schemes, we use 3 parameters:
-1. **Size** of pk, sk and signature (bytes)
-2. **Speed** of the 3 algorithms
-3. **Resources** when making hardware
+> 1. **Size** of pk, sk and signature (bytes)
+> 2. **Speed** of the 3 algorithms
+> 3. **Resources** when making hardware
 
 | Scheme (~128-bit level) | pk (bytes) | Signature (bytes) |
 | :--- | :---: | :---: |
